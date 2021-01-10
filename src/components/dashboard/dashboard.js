@@ -2,7 +2,9 @@
 export default {
   name: 'dashboard',
   components: {},
-  props: [],
+  props: {
+    msg: String
+  },
   data () {
     return {
 
