@@ -23,7 +23,7 @@
         <td>{{ user.email }}</td>
         <td>{{ user.completeAddress }}</td>
         <td>{{ user.company.name }}</td>
-        <td><router-link :to="'/detail/' + user.id">ver to-dos</router-link></td>
+        <td><router-link :to="'/users/' + user.id + '/todos'">ver to-dos</router-link></td>
       </tr>
     </tbody>
   </table>
