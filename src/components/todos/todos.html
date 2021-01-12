@@ -1,22 +1,42 @@
 <section class="todos">
-  <h1>Detalles</h1>
-
-  <table>
-    <caption>To-dos</caption>
-    <thead>
-      <tr>
-        <th scope="col">id</th>
-        <th scope="col">Título</th>
-        <th scope="col">Completado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="todo in todos" :key="todo.id">
-        <td>{{ todo.id }}</td>
-        <td>{{ todo.title }}</td>
-        <td>{{ todo.completed }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div id="left">
+    <h1>Sistema</h1>
+    <div>
+      <img alt="Vue logo" src="../../assets/logo.png">
+      Usuarios
+    </div>
+  </div>
+  <div id="right">
+    <div class="header">
+      <div>
+        <img alt="Vue logo" src="../../assets/logo.png">
+        <h3>Detalles del usuario</h3>
+      </div>
+      <div>
+        <img alt="Vue logo" src="../../assets/logo.png">
+        Marlene Sasoeur
+      </div>
+    </div>
+    <div>
+      <router-link to="/">Volver al tablero</router-link>
+    </div>
+    <table>
+      <caption>To-dos</caption>
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Título</th>
+          <th scope="col">Completado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="todo in todos" :key="todo.id">
+          <td>{{ todo.id }}</td>
+          <td>{{ todo.title }}</td>
+          <td>{{ todo.completed }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 

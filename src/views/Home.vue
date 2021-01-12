@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <dashboard msg="Welcome to Your dashboard"/>
+    <dashboard/>
   </div>
 </template>
 

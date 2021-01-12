@@ -5,9 +5,7 @@ import VueAxios from 'vue-axios'
 export default {
   name: 'dashboard',
   components: {},
-  props: {
-    msg: String,
-  },
+  props: [],
   data () {
     return {
       users: null
@@ -16,6 +14,7 @@ export default {
   computed: {
   },
   mounted () {
+    this.getUsers();
   },
   methods: {
     getUsers() {
