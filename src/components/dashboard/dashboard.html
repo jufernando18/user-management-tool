@@ -1,5 +1,12 @@
 
 <section class="dashboard">
   <h1>{{ msg }}</h1>
+  <button @click="getUsers">get users</button>
+
+  <ol>
+    <li v-for="user in users" :key="user.id">
+      {{ user }}
+    </li>
+  </ol>
 </section>
 
