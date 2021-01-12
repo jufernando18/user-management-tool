@@ -1,3 +1,63 @@
-.dashboard {
-
+button {
+  background-color: #0054fe;
+  border-color: #0054fe;
+  color: white;
+  border-radius: 0.6em;
+  font-size: 100%;
+  padding: 0.7em;
+}
+table {
+  width: 100%;
+  margin-top: 1em;
+  background-color: white;
+}
+tr:nth-child(even) {
+  background-color: #f9f9fc;
+}
+tr {
+  font-weight: bold;
+  color: #20253a;
+}
+th {
+  color: #9b9eac;
+}
+td, th {
+  padding: 0.7em 0;
+}
+caption {
+  font-weight: bold;
+  text-align: left;
+}
+#left {
+  width: 25%;
+  background-color: white;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+#right {
+  width: 65%;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+#left, #right {
+  margin: 0 2.5%;
+}
+.header {
+  background-color: white;
+  margin-top: 1em;
+}
+section {
+  width: 100%;
+  display: flex;
 }
