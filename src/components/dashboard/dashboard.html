@@ -1,12 +1,29 @@
-
 <section class="dashboard">
   <h1>{{ msg }}</h1>
   <button @click="getUsers">get users</button>
 
-  <ol>
-    <li v-for="user in users" :key="user.id">
-      {{ user }}
-    </li>
-  </ol>
+  <table>
+    <caption>Users</caption>
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Compañía</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="user in users" :key="user.id">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.completeAddress }}</td>
+        <td>{{ user.company.name }}</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 

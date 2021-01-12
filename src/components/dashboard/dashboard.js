@@ -13,8 +13,7 @@ export default {
       users: null
     }
   },
-  created: function () {
-    this.getUsers(); 
+  computed: {
   },
   mounted () {
   },
@@ -29,11 +28,20 @@ export default {
         }
       ).then((response) => {
         console.log(response.data);
-        this.users = response.data;
+        this.users = this.processUsers(response.data);
       }).catch((error) => {
         console.log(error);
         this.users = [];
       });
+    },
+    processUsers(users) {
+      users.forEach( user => {
+        user.firstname = user.name.split(' ')[0];
+        user.lastname = user.name.split(' ')[1];
+        const address = user.address;
+        user.completeAddress = address.street + ' - ' + address.suite + ', ' + address.city + ' ' + address.zipcode;
+      })
+      return users;
     }
   }
 }
