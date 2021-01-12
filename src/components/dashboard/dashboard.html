@@ -1,0 +1,50 @@
+<section class="dashboard">
+  <div id="left">
+    <h1>Sistema</h1>
+    <div>
+      <img alt="Vue logo" src="../../assets/logo.png">
+      Usuarios
+    </div>
+  </div>
+  <div id="right">
+    <div class="header">
+      <div>
+        <img alt="Vue logo" src="../../assets/logo.png">
+        <h3>Bienvenido a tu tablero</h3>
+      </div>
+      <div>
+        <img alt="Vue logo" src="../../assets/logo.png">
+        Marlene Sasoeur
+      </div>
+    </div>
+    <div>
+      <button>+ Añadir nuevo usuario</button>  
+    </div>
+    <table>
+      <caption>Usuarios</caption>
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Email</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Compañía</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="user in users" :key="user.id">
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstname }}</td>
+          <td>{{ user.lastname }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.completeAddress }}</td>
+          <td>{{ user.company.name }}</td>
+          <td><router-link :to="'/users/' + user.id + '/todos'">ver to-dos</router-link></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
