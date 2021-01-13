@@ -1,6 +1,4 @@
-import Vue from 'vue'
 import axios from 'axios'
-import VueAxios from 'vue-axios'
 
 export default {
   name: 'todos',
@@ -18,7 +16,6 @@ export default {
   },
   methods: {
     getTodos() {
-      Vue.use(VueAxios, axios);
       axios.get(
         'https://jsonplaceholder.typicode.com/todos?userId=' + this.$route.params.id, 
         { headers: {
